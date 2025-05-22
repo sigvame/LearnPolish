@@ -179,6 +179,8 @@ body[data-theme="dark"] .p-4 {
 .modal-content-word {
     background-color: #e4e4e4;
     color: #1a1a1a;
+    font-style: bold;
+    font-size: 16px;
     padding: 2rem 1.5rem;
     border-radius: 12px;
     width: 90%;
@@ -261,8 +263,10 @@ body[data-theme="dark"] .modal-word-popup {
 }
 
 body[data-theme="dark"] .modal-content-word {
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #292929;
+    color: #d4d4d4;
+    font-style: bold;
+    font-size: 16px;
     padding: 2rem 1.5rem;
     border-radius: 12px;
     width: 90%;
@@ -289,10 +293,10 @@ body[data-theme="dark"] .modal-content-word input,
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.6rem 0.8rem;
-    border: 1px solid #cccccc;
+    border: 1px solid #646464;
     border-radius: 6px;
-    background-color: #f1f1f1;
-    color: #1a1a1a;
+    background-color: #393939;
+    color: #ffffff;
     font-size: 1rem;
     box-sizing: border-box;
 }
