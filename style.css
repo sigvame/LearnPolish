@@ -67,6 +67,10 @@ nav.navbar .nav-link:focus {
   color: var(--color-white) !important;
 }
 
+#offcanvasMenu {
+  max-width: 80vw;
+}
+
 /* Offcanvas dark theme */
 body[data-theme="dark"] .offcanvas {
   background-color: #2a2a2a;
