@@ -102,6 +102,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 50px;
 }
 
 /* Scroll to top button */
