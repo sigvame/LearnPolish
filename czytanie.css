@@ -131,6 +131,10 @@ body[data-theme="dark"] .btn.btn-outline-dark:focus {
     border-color: #888;
 }
 
+.offcanvas-body {
+    max-width: 80%;
+}
+
 .p-4 {
     font-size: 18px;
     font-weight: 400;
