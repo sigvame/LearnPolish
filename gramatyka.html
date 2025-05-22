@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gramatyka – Nauka Polskiego</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+</head>
+
+<body data-theme="light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Gramatyka języka polskiego</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li lass="nav-item"><a a class="nav-link" href="index.html">Strona główna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Końcówki">Końcówki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Odmiana">Odmiana "być"</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Przypadki">Przypadki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Aspecty">Aspecty</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li lass="nav-item"><a a class="nav-link" href="index.html">Strona główna</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Końcówki">Końcówki</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Odmiana">Odmiana "być"</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Przypadki">Przypadki</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Aspecty">Aspecty</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="container mt-5 pt-4">
+
+        <!-- Czasy -->
+        <section class="mb-5">
+            <h2>Czasy</h2>
+            <p>W języku polskim występują trzy podstawowe czasy:</p>
+            <ul>
+                <li><strong>Czas teraźniejszy</strong> – np. "Idę do szkoły."</li>
+                <li><strong>Czas przeszły</strong> – np. "Poszedłem do szkoły."</li>
+                <li><strong>Czas przyszły</strong> – np. "Pójdę do szkoły."</li>
+            </ul>
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>Czas</th>
+                    <th>Pytanie</th>
+                    <th>Przykład (czytać)</th>
+                </tr>
+                <tr>
+                    <td>Teraźniejszy</td>
+                    <td>Co robię?</td>
+                    <td>czytam, czytasz, czyta...</td>
+                </tr>
+                <tr>
+                    <td>Przeszły</td>
+                    <td>Co zrobiłem?</td>
+                    <td>czytałem, czytałaś...</td>
+                </tr>
+                <tr>
+                    <td>Przyszły</td>
+                    <td>Co zrobię?</td>
+                    <td id="Końcówki">będę czytać / przeczytam</td>
+                </tr>
+            </table> 
+        </section><hr>
+
+        <!-- Odmiana czasowników - końcówki -->
+        <section class="mb-5">
+            <h2>Końcówki czasowników w różnych czasach</h2>
+        
+            <h4>Czas teraźniejszy (np. "czytać")</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Końcówka</th>
+                        <th>Przykład</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>-am / -ę</td>
+                        <td>czyt<b>am</b> / pisz<b>ę</b> </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>-asz / -esz</td>
+                        <td>czyt<b>asz</b> / pisz<b>esz</b> </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona/Ono</td>
+                        <td>-a / -e</td>
+                        <td>czyta / pisze</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>-amy / -emy</td>
+                        <td>czytamy / piszemy</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>-acie / -ecie</td>
+                        <td>czytacie / piszecie</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td>-ają / -ą</td>
+                        <td>czytają / piszą</td>
+                    </tr>
+                </tbody>
+            </table><br>
+        
+            <h4>Czas przeszły</h4>
+            <p>Końcówki zależą od rodzaju (męski, żeński, nijaki) i liczby.</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Rodzaj męski</th>
+                        <th>Rodzaj żeński</th>
+                        <th>Liczba mnoga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>-łem</td>
+                        <td>-łam</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>-łeś</td>
+                        <td>-łaś</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona</td>
+                        <td>-ł</td>
+                        <td>-ła</td>
+                        <td>-ło (nijaki)</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>-liśmy</td>
+                        <td>-łyśmy</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>-liście</td>
+                        <td>-łyście</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td>-li</td>
+                        <td>-ły</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table><br>
+        
+            <h4>Czas przyszły (z czasownikami niedokonanymi)</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Forma</th>
+                        <th>Przykład ("czytać")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>będę + bezokolicznik</td>
+                        <td>będę czytać</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>będziesz</td>
+                        <td>będziesz czytać</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona/Ono</td>
+                        <td>będzie</td>
+                        <td>będzie czytać</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>będziemy</td>
+                        <td>będziemy czytać</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>będziecie</td>
+                        <td>będziecie czytać</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td>będą</td>
+                        <td id="Odmiana">będą czytać</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><hr>
+        
+        <!-- Odmiana czasownika "być" -->
+        <section class="mb-5">
+            <h2>Odmiana czasownika "być"</h2>
+        
+            <h4>Czas teraźniejszy</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Forma</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>jestem</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>jesteś</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona/Ono</td>
+                        <td>jest</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>jesteśmy</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>jesteście</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td>są</td>
+                    </tr>
+                </tbody>
+            </table><br>
+        
+            <h4>Czas przeszły</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Rodzaj męski</th>
+                        <th>Rodzaj żeński</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>byłem</td>
+                        <td>byłam</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>byłeś</td>
+                        <td>byłaś</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona</td>
+                        <td>był</td>
+                        <td>była</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>byliśmy</td>
+                        <td>byłyśmy</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>byliście</td>
+                        <td>byłyście</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td>byli</td>
+                        <td>były</td>
+                    </tr>
+                </tbody>
+            </table><br>
+        
+            <h4>Czas przyszły</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Forma</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ja</td>
+                        <td>będę</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Ty</td>
+                        <td>będziesz</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">On/Ona/Ono</td>
+                        <td>będzie</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">My</td>
+                        <td>będziemy</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wy</td>
+                        <td>będziecie</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Oni/One</td>
+                        <td id="Przypadki">będą</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><hr
+  
+
+        <!-- Przypadki -->
+        <section class="mb-5">
+            <h2>Przypadki (Przypadki rzeczowników)</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Przypadek</th>
+                        <th>Pytania</th>
+                        <th>Przykład</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Mianownik (Називний)</td>
+                        <td>Kto? Co?</td>
+                        <td>Dom</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Dopełniacz (Родовий)</td>
+                        <td>Kogo? Czego?</td>
+                        <td>Bez domu</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Celownik (Давальний)</td>
+                        <td>Komu? Czemu?</td>
+                        <td>Domowi</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Biernik (Знахідний)</td>
+                        <td>Kogo? Co?</td>
+                        <td>Widzę dom</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Narzędnik (Орудний)</td>
+                        <td>Kim? Czym?</td>
+                        <td>Domem, piękną dziewczyną</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Miejscownik (Місцевий)</td>
+                        <td>O kim? O czym?</td>
+                        <td>O domu</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:rgb(240, 240, 240)">Wołacz (Кличний)</td>
+                        <td>-</td>
+                        <td>Domu!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><hr>
+
+        <!-- Odmiana czasowników -->
+        <section class="mb-5">
+            <h2>Odmiana czasowników (дієслова)</h2>
+            <p>Czasowniki odmieniają się przez osoby, liczby, czasy, tryby i rodzaje.</p>
+            <p>Przykład (czasownik "czytać"):</p>
+            <ul>
+                <li>Ja czytam</li>
+                <li>Ty czytasz</li>
+                <li>On/Ona czyta</li>
+                <li>My czytamy</li>
+                <li>Wy czytacie</li>
+                <li>Oni/One czytają</li>
+            </ul>
+        </section>
+
+        <!-- Odmiana przymiotników -->
+        <section class="mb-5">
+            <h2>Odmiana przymiotników (прикметники)</h2>
+            <p>Przymiotniki odmieniają się przez przypadki, liczby i rodzaje zgodnie z rzeczownikiem, który określają.
+            </p>
+            <p>np. "ładny dom", "ładna kobieta", "ładne dziecko"</p>
+
+            <table class="table table-bordered">
+                <tr><th>Stopień</th><th>Przymiotnik (Прикметник)</th><th>Przysłówek (Прислівник)</th></tr>
+                <tr><td style="background-color:rgb(240, 240, 240)">Równy</td><td>szybki</td><td>szybko</td></tr>
+                <tr><td style="background-color:rgb(240, 240, 240)">Wyższy</td><td>szybszy</td><td>szybciej</td></tr>
+                <tr><td style="background-color:rgb(240, 240, 240)">Najwyższy</td><td>najszybszy</td><td>najszybciej</td></tr>
+              </table>
+        </section><hr>
+
+        <!-- Przysłówki -->
+        <section class="mb-5">
+            <h2>Przysłówki (прислівники)</h2>
+            <p>Przysłówki określają sposób, miejsce, czas lub stopień czynności.</p>
+            <p id="Aspecty">np. "szybko", "wczoraj", "tutaj"</p>
+        </section><hr>
+
+        <!-- Dokonane i niedokonane -->
+        <section class="mb-5">
+            <h2>Aspecty dokonane i niedokonane</h2>
+            <p>
+                Czasowniki niedokonane opisują czynność trwającą lub powtarzalną (np. "czytać"), a dokonane – czynność
+                zakończoną (np. "przeczytać").
+            </p>
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>Polski (czasownik)</th>
+                    <th>Aspekt Niedokonany</th>
+                    <th>Aspekt Dokonany</th>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">pisać</td>
+                    <td>pisać</td>
+                    <td><b>na</b>pisać</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">czytać</td>
+                    <td>czytać</td>
+                    <td><b>prze</b>czytać</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">robić</td>
+                    <td>robić</td>
+                    <td><b>z</b>robić</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">mówić</td>
+                    <td>mówić</td>
+                    <td><b>powiedzieć</b></td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">brać</td>
+                    <td>brać</td>
+                    <td>wziąć</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">jeść</td>
+                    <td>jeść</td>
+                    <td>zjeść</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">otwierać</td>
+                    <td>otwierać</td>
+                    <td>otworzyć</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">oglądać</td>
+                    <td>oglądać</td>
+                    <td>obejrzeć</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">dzwonić</td>
+                    <td>dzwonić</td>
+                    <td>zadzwonić</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">kłaść</td>
+                    <td>kłaść</td>
+                    <td>położyć</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">widzieć</td>
+                    <td>widzieć</td>
+                    <td>zobaczyć</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">iść</td>
+                    <td>iść</td>
+                    <td>pójść</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">dawać</td>
+                    <td>dawać</td>
+                    <td>dać</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">przychodzić</td>
+                    <td>przychodzić</td>
+                    <td>przyjść</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">wychodzić</td>
+                    <td>wychodzić</td>
+                    <td>wyjść</td>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(240, 240, 240)">siedzieć</td>
+                    <td>siedzieć</td>
+                    <td>usiąść</td>
+                </tr>
+            </table></div>
+        </section>
+
+        <!-- Możesz добавить еще -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <label class="switch">
+            <input type="checkbox" id="themeToggleSwitch" />
+            <span class="slider round"></span>
+        </label>
+    </footer>
+
+    <button id="scrollTopBtn" title="Do góry">&#8679;</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

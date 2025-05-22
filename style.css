@@ -1,0 +1,197 @@
+:root {
+  --color-dark-gray: #2f2f2f;
+  --color-light-gray: #ccc;
+  --color-white: #fff;
+  --color-bg-light: #f9f9f9;
+}
+
+
+body[data-theme="light"] {
+  background-color: var(--color-bg-light);
+  color: var(--color-dark-gray);
+}
+
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body[data-theme="dark"] table.table.table-bordered {
+  background-color: #2a2a2a !important;
+  color: #ccc !important;
+  border-color: #444 !important;
+}
+
+body[data-theme="dark"] table.table.table-bordered td {
+  background-color: #3f3f3f !important;
+  color: #ccc !important;
+  border-color: #444 !important;
+}
+body[data-theme="dark"] table.table.table-bordered th {
+  background-color: #2c2c2c !important;
+  color: #ccc !important;
+  border-color: #444 !important;
+}
+
+.table th {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Светлая тема — светло-серый цвет */
+body[data-theme="light"] .table th {
+  background-color: #dcdcdc;
+}
+
+/* Тёмная тема — более тёмный серый */
+body[data-theme="dark"] .table th {
+  background-color: #f61414;
+}
+
+nav.navbar {
+  background-color: var(--color-dark-gray);
+  padding-top: 20px;
+}
+
+nav.navbar a.navbar-brand,
+nav.navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+nav.navbar .nav-link {
+  color: var(--color-light-gray) !important;
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link:focus {
+  color: var(--color-white) !important;
+}
+
+/* Offcanvas dark theme */
+body[data-theme="dark"] .offcanvas {
+  background-color: #2a2a2a;
+  color: #ddd;
+}
+
+body[data-theme="dark"] .offcanvas .btn-close {
+  filter: invert(1);
+}
+
+body[data-theme="dark"] .offcanvas a.nav-link {
+  color: var(--color-light-gray);
+}
+
+body[data-theme="dark"] .offcanvas a.nav-link:hover,
+body[data-theme="dark"] .offcanvas a.nav-link:focus {
+  color: var(--color-white);
+}
+
+.offcanvas-end {
+  width: 250px;
+}
+
+footer {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-gray);
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1100;
+  font-size: 24px;
+  border: none;
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-dark-gray);
+}
+
+/* Toggle switch styling (iPhone style) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-light-gray);
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-white);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: var(--color-dark-blue);
+}
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------- Gramatuka --------------------------------------------*/
+section {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+/*----------------------------------------- Czytanie --------------------------------------------*/
+

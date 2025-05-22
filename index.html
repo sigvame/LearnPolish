@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Polski Chat</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-theme="light">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Polski Chat</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="gramatyka.html">Gramatyka</a></li>
+                    <li class="nav-item"><a class="nav-link" href="czytanie.html">Czytanie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dictionary.html">Słownik</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Zamknij"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="gramatyka.html">Gramatyka</a></li>
+                <li class="nav-item"><a class="nav-link" href="czytanie.html">Czytanie</a></li>
+                <li class="nav-item"><a class="nav-link" href="dictionary.html">Słownik</a></li>
+            </ul>
+        </div>
+    </div><br><br><br>
+
+    <main class="container my-5" style="padding-bottom: 4rem;">
+        <section id="gramatyka" class="mb-5">
+            <h2>Gramatyka</h2>
+            <p>Materiały dotyczące gramatyki języka polskiego.</p>
+        </section>
+
+        <section id="czytanie" class="mb-5">
+            <h2>Czytanie</h2>
+            <p>Teksty na różnym poziomie zaawansowania.</p>
+        </section>
+
+        <section id="slownik" class="mb-5">
+            <h2>Słownik</h2>
+            <p>Dodawaj i oznaczaj ważne słowa.</p>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <label class="switch">
+            <input type="checkbox" id="themeToggleSwitch" />
+            <span class="slider round"></span>
+        </label>
+    </footer>
+
+    <button id="scrollTopBtn" title="Do góry">&#8679;</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

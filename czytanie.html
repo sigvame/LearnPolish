@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Czytanie tekstów</title>
+    <link rel="stylesheet" href="czytanie.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body data-theme="light">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Czytanie tekstów</a>
+
+            <label class="switch">
+                <input type="checkbox" id="themeToggleSwitch" />
+                <span class="slider round"></span>
+            </label>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li lass="nav-item"><a a class="nav-link" href="index.html">Strona główna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gramatyka.html">Gramatyka</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dictionary.html">Słownik</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Zamknij"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li lass="nav-item"><a a class="nav-link" href="index.html">Strona główna</a></li>
+                <li class="nav-item"><a class="nav-link" href="gramatyka.html">Gramatyka</a></li>
+                <li class="nav-item"><a class="nav-link" href="dictionary.html">Słownik</a></li>
+            </ul>
+        </div>
+    </div><br><br><br>
+
+    <!-- Кнопка для открытия бокового меню -->
+    <button class="btn btn-outline-dark m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+        ☰ Wybierz poziom
+    </button>
+    
+    <!-- Offcanvas меню -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Poziomy</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-2">
+            <div id="sidebar">
+                <p class="help">Kliknij dwukrotnie słowo, aby dodać je do słownika</p>
+                <h3 data-level="a1">A1</h3>
+                <ul id="list-a1"></ul>
+    
+                <h3 data-level="a2">A2</h3>
+                <ul id="list-a2"></ul>
+    
+                <h3 data-level="b1">B1</h3>
+                <ul id="list-b1"></ul>
+    
+                <h3 data-level="b2">B2</h3>
+                <ul id="list-b2"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Основная часть страницы -->
+    <div id="mainContent" class="p-4">
+        <div id="textContent"></div> <!-- сюда загружаем текст -->
+        <div id="textActions" style="display: none;">
+            <button id="markReadButton" class="btn btn-success me-2">✔️ Oznacz jako przeczytany</button>
+            <button id="markReadingButton" class="btn btn-primary">📘 Oznacz jako czytam</button>
+        </div>
+    </div>
+
+
+    <footer>
+        
+    </footer>
+
+    <div id="addWordModal" class="modal-word-popup hidden">
+        <div class="modal-content-word">
+            <span class="close-word-modal" title="Zamknij">&times;</span>
+            <h4>➕ Dodać to słowo do słownika?</h4>
+            <p id="selectedWordText">...</p>
+            <form id="addToDictionaryForm">
+                <input type="text" id="modalTranslationInput" placeholder="Tłumaczenie" required />
+                <input type="text" id="modalCategoryInput" placeholder="Kategoria" />
+                <select id="modalTagInput">
+                    <option value="">Brak etykiety</option>
+                    <option value="green">Zielony</option>
+                    <option value="blue">Niebieski</option>
+                    <option value="red">Czerwony</option>
+                    <option value="gray">Szary</option>
+                </select>
+                <button type="submit">💾 Dodaj</button>
+            </form>
+        </div>
+    </div>
+      
+    
+    <button id="scrollTopBtn" title="Do góry">&#8679;</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="czytanie.js"></script>
+    <script src="drop.js"></script>
+</body>
+
+</html>

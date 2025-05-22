@@ -1,0 +1,339 @@
+.read-text-title {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.read-text.open .read-text-content {
+    display: block;
+}
+
+.read-text-content {
+    display: none;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #ccc;
+    border-radius: 0 0 5px 5px;
+}
+
+.read-text .read-text-title {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.read-text.read .read-text-title {
+    background-color: #e9f5e9;
+    border-left: 4px solid green;
+}
+
+.read-text.reading .read-text-title {
+    background-color: #e0f0ff;
+    border-left: 4px solid #007bff;
+}
+
+
+#sidebar h3 {
+    cursor: pointer;
+    padding: 8px 5px;
+    border-bottom: 1px solid #ccc;
+    user-select: none;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding-left: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#sidebar ul.open {
+    max-height: 500px;
+}
+
+#sidebar ul li {
+    padding: 6px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#sidebar ul li:hover {
+    background-color: #959595;
+    color: white;
+}
+
+#sidebar ul li.read {
+    font-weight: bold;
+    color: green;
+}
+
+#sidebar ul li.reading {
+    font-weight: bold;
+    color: rgb(82, 82, 255);
+}
+
+
+
+
+/* Базовые стили для блока чтения */
+#textContent,
+#textActions {
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+/* Отдельный контейнер с тёмной темой */
+#readingContainer.dark-theme #textContent {
+    background-color: #222;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+#readingContainer.dark-theme #textActions {
+    background-color: #1a1a1a;
+    border-top: 1px solid #444;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Кнопки в тёмной теме */
+#readingContainer.dark-theme button {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #eee;
+}
+
+#readingContainer.dark-theme button:hover {
+    background-color: #555;
+    border-color: #888;
+    color: white;
+}
+
+body[data-theme="dark"] .btn.btn-outline-dark {
+    color: #ddd;
+    border-color: #555;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body[data-theme="dark"] .btn.btn-outline-dark:hover,
+body[data-theme="dark"] .btn.btn-outline-dark:focus {
+    color: white;
+    background-color: #444;
+    border-color: #888;
+}
+
+.p-4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+
+.help {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #959595c0;
+    font-style: italic;
+}
+body[data-theme="dark"] .help {
+    color: #c7c7c7c0;
+}
+
+body[data-theme="dark"] .p-4 {
+    background-color: #242424;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.modal-word-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.653);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content-word {
+    background-color: #e4e4e4;
+    color: #1a1a1a;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content-word h4 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #0077cc;
+}
+
+.modal-content-word p {
+    margin: 0.5rem 0 1rem;
+    font-weight: 500;
+}
+
+.modal-content-word input,
+.modal-content-word select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: #1a1a1a;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.modal-content-word button {
+    background-color: #0077cc;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content-word button:hover {
+    background-color: #005fa3;
+}
+
+.modal-content-word .close-word-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: color 0.2s ease;
+}
+
+.modal-content-word .close-word-modal:hover {
+    color: #0077cc;
+}
+
+
+
+
+body[data-theme="dark"] .modal-word-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+body[data-theme="dark"] .modal-content-word {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+body[data-theme="dark"] .modal-content-word h4 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #0077cc;
+}
+
+body[data-theme="dark"] .modal-content-word p {
+    margin: 0.5rem 0 1rem;
+    font-weight: 500;
+}
+
+body[data-theme="dark"] .modal-content-word input,
+.modal-content-word select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: #1a1a1a;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+body[data-theme="dark"] .modal-content-word button {
+    background-color: #0077cc;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+body[data-theme="dark"] .modal-content-word button:hover {
+    background-color: #005fa3;
+}
+
+body[data-theme="dark"] .modal-content-word .close-word-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: color 0.2s ease;
+}
+
+body[data-theme="dark"] .modal-content-word .close-word-modal:hover {
+    color: #0077cc;
+}
+
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
