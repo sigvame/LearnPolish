@@ -227,13 +227,14 @@ form#wordForm button:disabled {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-bottom: 2px;
+    max-height: 40px;
 }
 
 .bottom-actions button {
-    padding: 0.6rem 1.6rem;
-    font-size: 1rem;
-    font-weight: 600;
+    padding: 0.2rem 1.2rem;
+    font-size: 14px;
+    font-weight: 400;
     border: none;
     border-radius: 8px;
     background-color: #6c757d;
