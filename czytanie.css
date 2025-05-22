@@ -135,7 +135,6 @@ body[data-theme="dark"] .btn.btn-outline-dark:focus {
     font-size: 20px;
     font-weight: 400;
     margin: 0 auto;
-    max-width: 80%;
     background-color: #f0f0f0;
     border-radius: 15px;
 }
