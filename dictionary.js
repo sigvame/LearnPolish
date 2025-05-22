@@ -122,25 +122,55 @@ exportBtn.addEventListener("click", () => {
 
 
 importBtn.addEventListener("click", () => importInput.click());
-
 importInput.addEventListener("change", (e) => {
   const file = e.target.files[0];
   if (!file) return;
 
   const reader = new FileReader();
   reader.onload = function (event) {
+    const content = event.target.result;
+
     try {
-      const imported = JSON.parse(event.target.result);
-      if (Array.isArray(imported)) {
-        words = [...words, ...imported];
+      if (file.name.endsWith(".json")) {
+        // Импорт из JSON
+        const imported = JSON.parse(content);
+        if (Array.isArray(imported)) {
+          words = [...words, ...imported];
+          saveWords();
+          renderList();
+        } else {
+          alert("Nieprawidłowy plik JSON.");
+        }
+      } else {
+        // Импорт из текстового файла
+        const lines = content.split(/\r?\n/).filter(line => line.trim());
+        const parsed = lines.map(line => {
+          const match = line.match(/^(.+?)\s+—\s+(.+?)(?:\s+\((.+?)\))?(?:\s+\[(.+?)\])?$/);
+          if (!match) return null;
+
+          return {
+            word: match[1].trim(),
+            translation: match[2].trim(),
+            category: match[3] ? match[3].trim() : "",
+            tag: match[4] ? match[4].trim() : ""
+          };
+        }).filter(Boolean);
+
+        if (parsed.length === 0) {
+          alert("Brak poprawnych danych w pliku tekstowym.");
+          return;
+        }
+
+        words = [...words, ...parsed];
         saveWords();
         renderList();
       }
     } catch (err) {
-      alert("Nieprawidłowy plik JSON.");
+      alert("Błąd importu pliku.");
     }
   };
-  reader.readAsText(file);
+
+  reader.readAsText(file, "UTF-8");
 });
 
 function initCustomSelect(selectId, onChange) {
