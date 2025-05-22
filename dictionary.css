@@ -209,9 +209,7 @@ form#wordForm button:disabled {
 
 /* Адаптив */
 @media (max-width: 480px) {
-    form#wordForm {
-        flex-direction: column;
-    }
+    
 
     #filterPanel {
         flex-direction: column;
@@ -221,7 +219,7 @@ form#wordForm button:disabled {
     form#wordForm input,
     form#wordForm select,
     form#wordForm button {
-        width: 100%;
+        width: 70%;
     }
 }
 
