@@ -110,7 +110,10 @@ exportBtn.addEventListener("click", () => {
   });
 
   const textData = lines.join("\n");
-  const blob = new Blob([textData], { type: "text/plain" });
+
+  const utf8Bom = "\uFEFF";
+  const blob = new Blob([utf8Bom + textData], { type: "text/plain;charset=utf-8" });
+
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "dictionary_export.txt";
