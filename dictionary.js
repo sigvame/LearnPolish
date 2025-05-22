@@ -103,13 +103,20 @@ filterCategory.addEventListener("change", renderList);
 filterTag.addEventListener("change", renderList);
 
 exportBtn.addEventListener("click", () => {
-  const data = JSON.stringify(words, null, 2);
-  const blob = new Blob([data], { type: "application/json" });
+  const lines = words.map(w => {
+    const cat = w.category ? ` (${w.category})` : "";
+    const tag = w.tag ? ` [${w.tag}]` : "";
+    return `${w.word} — ${w.translation}${cat}${tag}`;
+  });
+
+  const textData = lines.join("\n");
+  const blob = new Blob([textData], { type: "text/plain" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "dictionary_export.json";
+  a.download = "dictionary_export.txt";
   a.click();
 });
+
 
 importBtn.addEventListener("click", () => importInput.click());
 
