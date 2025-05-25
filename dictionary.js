@@ -19,16 +19,29 @@ function saveWords() {
   localStorage.setItem("dictionary_words", JSON.stringify(words));
 }
 
+function updateCategoryFilter() {
+  const selectedValue = filterCategory.value;
+  const categories = [...new Set(words.map(w => w.category).filter(Boolean))];
+
+  filterCategory.innerHTML = '<option value="">Wszystkie kategorie</option>';
+  categories.forEach(cat => {
+    const option = document.createElement("option");
+    option.value = cat;
+    option.textContent = cat;
+    filterCategory.appendChild(option);
+  });
+  filterCategory.value = selectedValue;
+}
+
 function renderList() {
   wordList.innerHTML = "";
   const selectedCat = filterCategory.value;
   const selectedTag = filterTag.value;
 
-  const categories = new Set();
-  words.forEach((w, i) => {
-    if (w.category) categories.add(w.category);
+  updateCategoryFilter();
 
-    if ((selectedCat && w.category !== selectedCat) ||
+  words.forEach((w, i) => {
+    if ((selectedCat && w.category !== selectedCat) || 
         (selectedTag && w.tag !== selectedTag)) return;
 
     const div = document.createElement("div");
@@ -61,15 +74,8 @@ function renderList() {
     div.appendChild(del);
     wordList.appendChild(div);
   });
-
-  filterCategory.innerHTML = '<option value="">Wszystkie kategorie</option>';
-  categories.forEach(cat => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = cat;
-    filterCategory.appendChild(opt);
-  });
 }
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -172,6 +178,7 @@ importInput.addEventListener("change", (e) => {
 
   reader.readAsText(file, "UTF-8");
 });
+
 
 function initCustomSelect(selectId, onChange) {
   const container = document.getElementById(selectId);
